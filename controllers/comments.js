@@ -21,7 +21,7 @@ module.exports = {
         } catch (err) {
         //   console.log(err);
         }
-        res.redirect(`/post/${post._id}`);
+        res.redirect(`/posts/${post._id}`);
       }
 
       async function deleteComment(req, res) {

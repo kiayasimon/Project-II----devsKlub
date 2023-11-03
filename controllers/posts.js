@@ -33,7 +33,7 @@ function newPost(req, res) {
 
 async function create(req, res) {
   try {
-    // Update this line because now we need the _id of the new movie
+    // Update this line because now we need the _id of the new post
     const post = await Post.create({ ...req.body, user: req.user._id });
     // Redirect to the new movie's show functionality
     res.redirect(`/posts`);
