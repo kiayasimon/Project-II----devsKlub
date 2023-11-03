@@ -38,8 +38,18 @@
           /><%= c.userName %>
         </td>
         <td><%= c.createdAt.toLocaleDateString() %></td>
-        <td><%= c.content %></td>
-        <td><%= c.rating %></td>
+        <td id="comment-content" style="display: block">
+          <%= c.content %> <% if (user?._id.equals(c.user._id)) { %>
+          <button id="edit-comment-button">Edit</button>
+          <% } %>
+        </td>
+        <td id="edit-comment-form" style="display: none">
+          <form method="POST" action="/comments/<%= c._id %>?_method=PUT">
+            <label>Comment:</label>
+            <textarea name="content"></textarea>
+            <input type="submit" value="Edit Comment" />
+          </form>
+        </td>
         <td>
           <% if (user?._id.equals(c.user._id)) { %>
           <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
@@ -61,3 +71,15 @@
   <h5>No Comments Yet, Be the First to Leave One!</h5>
   <% } %> <%- include('../partials/footer') %>
 </section>
+<script>
+  const editCommentButton = document.getElementById("edit-comment-button");
+  const editCommentForm = document.getElementById("edit-comment-form");
+  const commentContent = document.getElementById("comment-content");
+
+  editCommentButton.addEventListener("click", () => {
+    if (editCommentForm.style.display === "none") {
+      editCommentForm.style.display = "block";
+      commentContent.style.display = "none";
+    }
+  });
+</script>
