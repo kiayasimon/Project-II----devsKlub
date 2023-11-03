@@ -1,2 +1,2 @@
-# Project-II----devsKlub
+# ProjectII: devsKlub
 GASEI PROJECT II
