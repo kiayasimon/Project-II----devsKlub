@@ -1,8 +1,219 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+* {
+  box-sizing: border-box;
+  font-family: Train One;
+  color: #f48c00;
+  background-color: #232323;
 }
 
-a {
-  color: #00B7FF;
+#Title {
+  font-size: 80px;
+  text-align: center;
+  margin: 0;
+  padding: 300;
+  color: #4c7a34;
+  font-style: italic;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 150px 1fr;
+  grid-template-areas:
+    "nav"
+    "main";
+}
+
+body > nav {
+  grid-area: nav;
+  background-color: #f48c00;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px 0 30px;
+}
+
+#slogan {
+  width: 600px;
+  background-color: #f48c00;
+  color: #232323;
+  margin-right: auto;
+  font-family: Train One;
+  font-weight: 900;
+  font-size: 20px;
+  font-style: italic;
+}
+
+#homepage {
+  box-sizing: border-box;
+  font-family: Train One;
+  color: #4c7a34;
+  font-size: 150px;
+  text-align: center;
+  font-style: italic;
+}
+
+body > main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e8eceb;
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+body > main h1:first-child {
+  margin-bottom: 50px;
+}
+
+nav > a {
+  margin: 20px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+nav > a:hover:not(.active) {
+  color: white;
+  background-color: #424748;
+}
+
+nav > a.active {
+  color: white;
+  cursor: default;
+}
+
+#new-form {
+ display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+#new-form *,
+#add-review-form * {
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#new-form input[type="submit"] {
+  grid-column: span 2;
+  width: 10rem;
+  margin-left: auto;
+}
+
+table {
+  font-size: 20px;
+}
+
+table thead th {
+  padding: 5px;
+  border-bottom: 2px solid #424748;
+}
+
+table td {
+  padding: 10px;
+  text-align: center;
+}
+
+#list td:nth-child(2),
+#list td:nth-child(3) {
+  min-width: 100px;
+}
+
+#list a {
+  border-radius: 4px;
+  background-color: #b8c0c2;
+  padding: 4px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+#list a:hover {
+  background-color: white;
+}
+
+#show-page {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+}
+
+#show-page div:nth-child(even) {
+  font-weight: bold;
+}
+
+#add-review-form,
+#add-performer-form {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+#add-review-form input[type="submit"],
+#add-performer-form input[type="submit"] {
+  width: 10rem;
+  grid-column: 2 / 3;
+}
+
+hr {
+  color: #424748;
+}
+
+#badge-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* padding: 1rem; */
+  width: 20%;
+  border: 2px solid #b8c0c2;
+  border-radius: 0.5rem;
+  margin: 0.5rem 0 2rem;
+}
+
+.badge {
+  background-color: #b8c0c2;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 0.3rem;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+#show-page ul {
+  margin: 0 0 2rem;
+  padding: 0;
+  list-style: none;
+}
+
+#show-page li {
+  font-weight: bold;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 34px;
+}
+
+.login img {
+  height: 30px;
+}
+
+.review-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-user img {
+  border-radius: 50%;
+  height: 40px;
+}
+input {
+  height: 30px;
+  margin: 0;
+  padding: 0;
 }

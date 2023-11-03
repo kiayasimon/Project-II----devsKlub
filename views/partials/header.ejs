@@ -1,10 +1,11 @@
 <link rel='stylesheet' href='/stylesheets/style.css' />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
 <nav>
-    <img src="/images/camera.svg">
-    <a href="/posts" <%- title === 'Kommunity' ? 'class="active"' : '' %>>Kommunity</a>
-    <% if (user) { %>
-      <!-- <a href="/performers/new"	<%- title === 'Add Performer' ? 'class="active"' : '' %>>
-          ADD PERFORMER</a> -->
+   <p id="slogan">support for developers, home to forward-thinkers!</p>
+   <% if (user) { %>
+    <a href="/posts" <%- title === 'Kommunity' ? 'class="active"' : '' %>>devFeed</a>
       <a href="/posts/new" <%- title === 'Add Post' ? 'class="active"' : '' %>>Make a Post!</a>
       <a href="/logout">LOG OUT</a>
     <% } else { %>
