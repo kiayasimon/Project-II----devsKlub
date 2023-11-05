@@ -5,10 +5,10 @@
   background-color: #232323;
 }
 
-#Title {
+#devFeed {
   font-size: 80px;
   text-align: center;
-  margin-top: 100px;
+  margin-top: -900px;
   padding: 5px;
   color: #4c7a34;
   font-style: italic;
@@ -23,6 +23,13 @@ body {
   grid-template-areas:
     "nav"
     "main";
+}
+
+#nav-logo {
+  display: flex;
+  align-items: center;
+  width: 5%;
+  background-color: #f48c00;
 }
 
 body > nav {
@@ -54,6 +61,16 @@ body > nav {
   font-style: italic;
 }
 
+#logo-img {
+  display: block;
+  height: 500px; 
+  margin-left: auto;
+  margin-right: auto; 
+  margin-top: -130px;
+  margin-bottom: -130px;
+  
+}
+
 body > main {
   grid-area: main;
   display: flex;
@@ -76,8 +93,8 @@ nav > a {
 }
 
 nav > a:hover:not(.active) {
-  color: white;
-  background-color: #424748;
+  color:#232323;
+  background-color:#4c7a34;
 }
 
 nav > a.active {
@@ -109,17 +126,20 @@ table {
 }
 
 table thead th {
-  padding: 5px;
+  padding: 50px;
   border-bottom: 2px solid #424748;
   margin-top: -200px;
+  border-bottom: 2px solid #4c7a34;
 }
 
 table td {
-  padding: 10px;
+  padding: 40px;
   text-align: center;
+  
 }
 tbody td {
-  border-bottom: 2px solid #4c7a34;
+  /* border-bottom: 2px solid #4c7a34; */
+  width: 90%;
 }
 #list td:nth-child(2),
 #list td:nth-child(3) {
@@ -128,10 +148,11 @@ tbody td {
 
 #list a {
   border-radius: 4px;
-  background-color: #b8c0c2;
-  padding: 4px;
+  background-color:#4c7a34;
+  padding: 10px;
   text-decoration: none;
   font-size: 14px;
+  color: #232323;
 }
 
 #list a:hover {
