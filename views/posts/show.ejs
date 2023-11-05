@@ -38,12 +38,12 @@
           /><%= c.userName %>
         </td>
         <td><%= c.createdAt.toLocaleDateString() %></td>
-        <td id="comment-content" style="display: block">
+        <td class="comment-content" style="display: block">
           <%= c.content %> <% if (user?._id.equals(c.user._id)) { %>
-          <button id="edit-comment-button">Edit</button>
+          <button class="edit-comment-button">Edit</button>
           <% } %>
         </td>
-        <td id="edit-comment-form" style="display: none">
+        <td class="edit-comment-form" style="display: none">
           <form method="POST" action="/comments/<%= c._id %>?_method=PUT">
             <label>Comment:</label>
             <textarea name="content"></textarea>
@@ -72,14 +72,17 @@
   <% } %> <%- include('../partials/footer') %>
 </section>
 <script>
-  const editCommentButton = document.getElementById("edit-comment-button");
-  const editCommentForm = document.getElementById("edit-comment-form");
-  const commentContent = document.getElementById("comment-content");
+  const editCommentButtons = document.querySelectorAll(".edit-comment-button");
+  const editCommentForm = document.querySelectorAll(".edit-comment-form");
+  const comments = document.querySelectorAll(".comment-content");
 
-  editCommentButton.addEventListener("click", () => {
-    if (editCommentForm.style.display === "none") {
-      editCommentForm.style.display = "block";
-      commentContent.style.display = "none";
-    }
+  editCommentButtons.forEach((button, index) => {
+    
+    button.addEventListener("click", () => {
+      if (editCommentForm[index].style.display === "none") {
+        editCommentForm[index].style.display = "block";
+        comments[index].style.display = "none";
+      }
+    });
   });
 </script>
