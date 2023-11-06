@@ -7,13 +7,26 @@
 
 #devFeed {
   font-size: 80px;
-  text-align: center;
-  margin-top: -900px;
-  padding: 5px;
-  color: #4c7a34;
+  margin-top: -200px;
+  color: #f48c00;
   font-style: italic;
-  
+  text-align: center;
 }
+
+#devFeed2 {
+  font-size: 20px;
+  color:#4c7a34;
+  text-align: center;
+  margin-top: -5%;
+}
+
+#devFeedpic {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10%;
+  width: 20%;
+}
+
 
 body {
   margin: 0;
@@ -59,6 +72,16 @@ body > nav {
   font-size: 150px;
   text-align: center;
   font-style: italic;
+  margin-top: 100px;
+
+}
+
+#home-welcome {
+  text-align: center;
+  max-width: 60%;
+  margin: auto;
+  margin-bottom: 500px ;
+  margin-top: -100px;
 }
 
 #logo-img {
@@ -66,8 +89,9 @@ body > nav {
   height: 500px; 
   margin-left: auto;
   margin-right: auto; 
-  margin-top: -130px;
-  margin-bottom: -130px;
+  margin-top: -200px;
+  margin-bottom: -10px;
+
   
 }
 
@@ -83,6 +107,7 @@ body > main {
 
 body > main h1:first-child {
   margin-bottom: 50px;
+
 }
 
 nav > a {
@@ -106,53 +131,80 @@ nav > a.active {
  display: flex;
   flex-direction: column;
   width: 50%;
+  margin: 0 auto;
+  margin-top: 300px;
 }
 
 #new-form *,
 #add-comment-form * {
   font-size: 20px;
-  padding: 5px;
   border-radius: 5px;
+  color: #4c7a34;
 }
 
 #new-form input[type="submit"] {
   grid-column: span 2;
   width: 10rem;
   margin-left: auto;
+  color: #4c7a34;
+  
 }
 
 table {
-  font-size: 20px;
+  font-size: 17px;
+  max-width: 70%;
+  position: center;
+
 }
 
 table thead th {
-  padding: 50px;
-  border-bottom: 2px solid #424748;
-  margin-top: -200px;
-  border-bottom: 2px solid #4c7a34;
+  color: #4c7a34;
+  text-decoration: underline;
+  text-decoration-color:#f48c00;
+  font-size: 27px;
+  font-style: italic;
+  text-align: center;
 }
 
 table td {
-  padding: 40px;
-  text-align: center;
+  padding: 70px;
+  position: center;
   
 }
+
+
 tbody td {
   /* border-bottom: 2px solid #4c7a34; */
-  width: 90%;
+  width: 100%;
+  /* margin-top: 70px; */
+  /* margin-bottom: -300px; */
+  /* margin-right: 150px; */
 }
+
+
 #list td:nth-child(2),
 #list td:nth-child(3) {
   min-width: 100px;
 }
 
+
+#list {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #list a {
+  /* margin-top: 70px;
+  margin-bottom: -30px;
+  margin-right: 150px; */
+  width: 70px;
   border-radius: 4px;
   background-color:#4c7a34;
   padding: 10px;
   text-decoration: none;
   font-size: 14px;
   color: #232323;
+  float: left;
 }
 
 #list a:hover {
@@ -160,9 +212,12 @@ tbody td {
 }
 
 #show-page {
-  display: grid;
-  grid-template-columns: auto auto;
   grid-gap: 1rem;
+  /* margin: 0 auto; */
+  margin-top: 100px;
+  text-align: center;
+  font-size: 50px;
+  font-style: italic;
 }
 
 #show-page div:nth-child(even) {
@@ -170,15 +225,21 @@ tbody td {
 }
 
 #add-comment-form {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 1rem;
-  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: -100px;
 }
 
 #add-comment-form input[type="submit"] {
-  width: 10rem;
+  width: 15rem;
   grid-column: 2 / 3;
+  font-style: italic;
+}
+
+#commentPrompt {
+  color:#4c7a34
 }
 
 hr {
@@ -188,7 +249,7 @@ hr {
 #badge-container {
   display: flex;
   flex-wrap: wrap;
-  /* padding: 1rem; */
+  padding: 1rem;
   width: 20%;
   border: 2px solid #b8c0c2;
   border-radius: 0.5rem;
@@ -225,7 +286,7 @@ hr {
   height: 30px;
 }
 
-.review-user {
+/* .review-user {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -233,10 +294,23 @@ hr {
 
 .review-user img {
   border-radius: 50%;
-  height: 40px;
-}
+  height: 40px; */
+/* } */
+
 input {
   height: 30px;
   margin: 0;
   padding: 0;
+}
+
+.comment-user {
+  display: flex;
+  /* flex-direction: column; */
+  width: 50%;
+  margin: 100px
+  margin-top: 30px;
+}
+
+#udc {
+ margin: 0 auto;
 }

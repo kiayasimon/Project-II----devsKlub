@@ -1,21 +1,25 @@
 <%- include('../partials/header') %>
 
+<img id="devFeedpic" src="https://i.imgur.com/pJs84sh.png">
+<h1 id="devFeed"> devFeed</h1>
+<p id="devFeed2"> See What's New!</p>
+
 <table id="list">
   <thead>
     <tr>
-      <!-- <th>See What's New!</th> -->
-      <th id="devFeed">devFeed</th>
-      <!-- <th>Comments!</th> -->
+      <th>Posts!</th>
+      <th>Comments!</th>
     </tr>
   </thead>
+
   <tbody>
     <% posts.forEach(function(p) { %>
       <tr>
-        <td><%= p.title %></td>
+        <!-- <td><%= p.title %></td> -->
       </tr>
       <td><%= p.content %></td>
       <td></td>
-      <td><a href="/posts/<%= p._id %>">Reply</a></td>
+      <td ><a href="/posts/<%= p._id %>">Reply</a></td>
       <br>
     <% }); %>
   </tbody>

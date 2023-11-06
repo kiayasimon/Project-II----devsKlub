@@ -1,26 +1,26 @@
 <%- include('../partials/header') %>
 
 <section id="show-page">
-  <div>Title:</div>
+  <div id="commentPrompt">You're Replying to</div>
   <div><%= post.title %></div>
 
   <br /><br />
-  <h2>Comments</h2>
+  <!-- <h2>Comments</h2> -->
   <form
     id="add-comment-form"
     method="POST"
     action="/posts/<%= post._id %>/comments"
   >
-    <label>Comment:</label>
+    <!-- <label>Add Your Comment:</label> -->
     <textarea name="content"></textarea>
 
-    <input type="submit" value="Add Comment" />
+    <input type="submit" value="Send Your Comment!" />
   </form>
 
   <% if (post.comments.length) { %>
   <table>
     <thead>
-      <tr>
+      <tr id="udc">
         <th>User</th>
         <th>Date</th>
         <th>Comment</th>
@@ -68,7 +68,7 @@
     </tbody>
   </table>
   <% } else { %>
-  <h5>No Comments Yet, Be the First to Leave One!</h5>
+  <!-- <h5>No Comments Yet, Be the First to Leave One!</h5> -->
   <% } %> <%- include('../partials/footer') %>
 </section>
 <script>
