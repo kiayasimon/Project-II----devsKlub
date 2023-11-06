@@ -191,20 +191,22 @@ tbody td {
 #list {
   margin-left: auto;
   margin-right: auto;
+  column-gap: -1000px;
 }
 
 #list a {
   /* margin-top: 70px;
   margin-bottom: -30px;
   margin-right: 150px; */
-  width: 70px;
+  width: 60px;
   border-radius: 4px;
   background-color:#4c7a34;
-  padding: 10px;
+  padding: 8px;
   text-decoration: none;
   font-size: 14px;
   color: #232323;
   float: left;
+  
 }
 
 #list a:hover {
@@ -303,14 +305,44 @@ input {
   padding: 0;
 }
 
-.comment-user {
-  display: flex;
-  /* flex-direction: column; */
-  width: 50%;
-  margin: 100px
-  margin-top: 30px;
+.comment-user,
+.comment-content,
+.edit-comment-button,
+.edit-comment-form {
+  width: 50%; 
+  margin: 10px;
+  box-sizing: border-box; 
+}
+
+.edit-comment-button {
+  background-color: #4c7a34;
+  color: #232323;
+  width: 60px;
+  font-weight: 1000;
+  border-radius: 6px;
 }
 
 #udc {
- margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  margin-top: 200px;
+  margin-left: 600px;
 }
+
+.comment-user,
+.comment-content,
+.edit-comment-button,
+.edit-comment-form, 
+.delete-comment-button {
+  flex-grow: 1;
+  row-gap: -30rem;
+
+}
+
+.comment-avatar img {
+  border-radius: 50%; 
+  width: 50px; 
+  height: 50px; 
+  object-fit: cover;
+}
+

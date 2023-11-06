@@ -21,9 +21,9 @@
   <table>
     <thead>
       <tr id="udc">
-        <th>User</th>
-        <th>Date</th>
-        <th>Comment</th>
+        <th>User, </th>
+        <th>Date, </th>
+        <th>Details</th>
       </tr>
     </thead>
     <tbody>
@@ -31,11 +31,11 @@
       c.comment %>
       <tr>
         <td class="comment-user">
-          <img
-            alt="avatar"
-            src="<%= c.userAvatar %>"
-            referrerpolicy="no-referrer"
-          /><%= c.userName %>
+          <div class="comment-avatar">
+          <img alt="avatar"
+            src="<%= c.userAvatar %>" referrerpolicy="no-referrer"/>
+          </div> 
+          <%= c.userName %>
         </td>
         <td><%= c.createdAt.toLocaleDateString() %></td>
         <td class="comment-content" style="display: block">
@@ -50,7 +50,7 @@
             <input type="submit" value="Edit Comment" />
           </form>
         </td>
-        <td>
+        <td class="delete-comment-button">
           <% if (user?._id.equals(c.user._id)) { %>
           <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
             <button type="submit">X</button>
