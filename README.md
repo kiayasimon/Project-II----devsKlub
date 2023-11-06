@@ -31,7 +31,7 @@ CSS
 ![Alt text](public/images/TRELLO.png)
 
 ## FUTURE ENHANCEMENTS
-My ultimate desires for this CRUD application is to implement more interactive features including the following: ability to follow other users, post pictures and videos, and direct messaging functions that will allow users to interact with oneanother on a more interpersonal level. While expereinces like this are more common amongst a=the vast majority of social networking platforms, devsKlub can render a more curated and targeted experience for developers seeking community and new ways to meet fellow developers!
+My ultimate desires for this CRUD application is to implement more interactive features including the following: ability to follow other users, post pictures and videos, and direct messaging functions that will allow users to interact with oneanother on a more interpersonal level. While expereinces like this are more common amongst the vast majority of social networking platforms, devsKlub can render a more curated and targeted experience for developers seeking community and new ways to meet fellow developers!
 
 ## AUTHOR
 www.linkedin.com/in/kiaya-robertson
